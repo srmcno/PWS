@@ -15,6 +15,7 @@ import StatCard from '@/components/ui/StatCard';
 import { Card, CardBody, CardHeader, CardTitle } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import ProgressBar from '@/components/ui/ProgressBar';
+import WaterResources from '@/components/WaterResources';
 import Link from 'next/link';
 import { formatCurrency, formatDate, calculateLifePercentage, isDateOverdue, isDateUpcoming } from '@/lib/utils';
 import { categoryLabels, conditionTextColors, statusColors, priorityColors } from '@/types';
@@ -90,6 +91,9 @@ export default function Dashboard() {
           variant={metrics.assetsNeedingAttention > 0 ? 'danger' : 'success'}
         />
       </div>
+
+      {/* Water Resources - Lake Level Monitoring */}
+      <WaterResources />
 
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
